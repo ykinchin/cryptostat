@@ -1,0 +1,82 @@
+@import "../../media";
+
+.wrapper {
+  width: 100%;
+  box-shadow: 0 5px 10px 1px rgb(205, 205, 205);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8px 3rem;
+  margin-top: 2rem;
+
+  .searchbar {
+    padding: 1rem 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include s {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+    .form {
+      width: 40%;
+      @include s {
+        width: 100%;
+      }
+
+      .input {
+        box-sizing: border-box;
+        width: 100%;
+        line-height: 2rem;
+        padding-left: 10px;
+        border: none;
+        box-shadow: 0 5px 8px 1px rgb(205, 205, 205);
+        border-radius: 10px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    .tr {
+      border-bottom: 1px solid black;
+      .hash__tr {
+        padding: 0 2rem;
+
+        @include m {
+          padding: 0 0.5rem;
+        }
+      }
+
+      .coin__tr {
+        text-align: left;
+      }
+
+      .volume__tr {
+        @include m {
+          display: none;
+        }
+      }
+
+      .mkt__tr {
+        @include s {
+          display: none;
+        }
+      }
+    }
+  }
+}

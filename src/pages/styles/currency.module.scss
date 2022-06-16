@@ -1,0 +1,149 @@
+@import "../../media";
+
+.currency__page {
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0 5px 10px 1px rgb(205, 205, 205);
+  padding: 1rem 8px 3rem;
+  margin: 2rem 0;
+
+  .currency {
+    display: flex;
+    align-items: center;
+
+    .img {
+      width: 8rem;
+      margin-right: 3rem;
+
+      @include m {
+        width: 4rem;
+        margin-right: 1rem;
+      }
+    }
+
+    .header {
+      line-height: 0.5rem;
+
+      @include m {
+        line-height: 1;
+      }
+    }
+  }
+
+  .sparkline__wrapper {
+    border-bottom: 1px solid black;
+
+    .sparkline {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .sparkline__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2rem;
+        padding: 0 0.5rem;
+
+        .sparkline__price {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+    }
+    .stats {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      justify-items: center;
+
+      @include m {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .detailed {
+    width: 100%;
+
+    .detailed__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      @include m {
+        text-align: center;
+      }
+    }
+    .grid__container {
+      display: grid;
+      grid-template-areas: "sum pers1 pers2";
+
+      @include s {
+        grid-template-areas:
+          "sum   "
+          "pers1"
+          "pers2 ";
+      }
+
+      @include m {
+        justify-items: center;
+
+        text-align: center;
+      }
+
+      .market__sum {
+        grid-area: sum;
+
+        @include s {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include m {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .market__persentage_1 {
+        grid-area: pers1;
+        @include s {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include m {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .market__persentage_2 {
+        grid-area: pers2;
+        @include s {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include m {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .subtitle {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: green;
+      }
+    }
+  }
+}

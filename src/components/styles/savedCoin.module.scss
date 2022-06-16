@@ -1,0 +1,58 @@
+@import "../../media";
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  .coins {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @include m {
+      justify-content: center;
+    }
+
+    .coin {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 8px;
+      min-width: 300px;
+      width: max-content;
+      box-shadow: 0 5px 8px 1px rgb(205, 205, 205);
+      border-radius: 10px;
+      box-sizing: border-box;
+      margin-bottom: 2rem;
+
+      @include m {
+        min-width: 250px;
+      }
+
+      .coin__link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+
+        .img {
+          width: 70px;
+          height: 70px;
+        }
+
+        .title {
+          width: max-content;
+
+          .name {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .close__btn {
+        padding-top: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}

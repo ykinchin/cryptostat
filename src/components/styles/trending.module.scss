@@ -1,0 +1,73 @@
+@import "../../media";
+
+.trending {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 3rem 0;
+  box-shadow: 0 5px 8px 1px rgb(205, 205, 205);
+  border-radius: 10px;
+  padding: 2rem 8px;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+
+    .flex__container {
+      display: flex;
+      align-items: center;
+      box-shadow: 0 5px 10px 2px rgb(205, 205, 205);
+      border-radius: 10px;
+      transition: 0.4s ease-in-out;
+      padding: 5px 1.2rem 5px 5px;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.4s ease-in-out;
+      }
+
+      .coin__wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .coin {
+          display: flex;
+          align-items: center;
+
+          .img {
+            margin: 1rem;
+
+            @include m {
+              margin: 0.5rem;
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          .coin__info {
+            .name {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .btc {
+        display: flex;
+        align-items: center;
+
+        .btc__img {
+          width: 1.2rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../media";
+
+.tr {
+  height: 80px;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+
+  .add__btn {
+    cursor: pointer;
+  }
+
+  .coin {
+    display: flex;
+    align-items: center;
+
+    .coin__img {
+      width: 2rem;
+      margin: 1rem;
+      margin-left: 0;
+      border-radius: 50%;
+    }
+
+    .coin__name {
+        text-align: left;
+
+      @include s {
+        display: none;
+      }
+    }
+  }
+
+  .percentage_green {
+    color: green;
+  }
+
+  .percentage_red {
+    color: red;
+  }
+
+  .volume__td {
+    width: 180px;
+    @include m {
+      display: none;
+    }
+  }
+
+  .mkt__td {
+    width: 180px;
+    @include s {
+      display: none;
+    }
+  }
+}
